@@ -1,0 +1,128 @@
+{
+  "compilerOptions": {
+    "composite": false,
+
+    "moduleDetection": "force",
+
+
+    "moduleResolution": "Node",
+
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "inlineSources": false,
+    "removeComments": true,
+    "verbatimModuleSyntax": true,
+    "preserveWatchOutput": true,
+    // 编译目标和模块化配置
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+
+    // 严格类型检查
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+
+    // 模块解析配置
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./mock/*"],
+
+
+      // @vben-core 核心模块 - 指向 libs/@core 目录
+      "@vben-core/shadcn-ui": ["libs/@core/ui-kit/shadcn-ui/src"],
+      "@vben-core/form-ui": ["libs/@core/ui-kit/form-ui/src"],
+      "@vben-core/popup-ui": ["libs/@core/ui-kit/popup-ui/src"],
+      "@vben-core/menu-ui": ["libs/@core/ui-kit/menu-ui/src"],
+      "@vben-core/layout-ui": ["libs/@core/ui-kit/layout-ui/src"],
+      "@vben-core/tabs-ui": ["libs/@core/ui-kit/tabs-ui/src"],
+
+      // @vben-core 共享功能
+      "@vben-core/shared/*": ["libs/@core/base/shared/src/*"],
+
+      // @vben-core 基础功能
+      "@vben-core/composables": ["libs/@core/composables/src"],
+      "@vben-core/preferences": ["libs/@core/preferences/src"],
+      "@vben-core/preferences/*": ["libs/@core/preferences/src/*"],
+      "@vben-core/typings": ["libs/@core/base/typings/src"],
+      "@vben-core/typings/*": ["libs/@core/base/typings/src/*"],
+
+
+
+
+      // @vben 基础模块
+      "@vben/access": ["libs/effects/access/src"],
+      "@vben/constants": ["libs/constants/src"],
+      "@vben/hooks": ["libs/effects/hooks/src"],
+      "@vben/icons": ["libs/icons/src"],
+      "@vben/locales": ["libs/locales/src"],
+      "@vben/preferences": ["libs/preferences/src"],
+      "@vben/stores": ["libs/stores/src"],
+      "@vben/types": ["libs/types/src"],
+      "@vben/utils": ["libs/utils/src"],
+      "@vben/request": ["libs/effects/request/src"],
+      "@vben/common-ui/es/loading": ["libs/effects/common-ui/src/components/loading"],
+      "@vben/common-ui/es/tippy": ["libs/effects/common-ui/src/components/tippy"],
+      "@vben/common-ui": ["libs/effects/common-ui/src"],
+      "@vben/common-ui/*": ["libs/effects/common-ui/src/*"],
+      "@vben/layouts": ["libs/effects/layouts/src"],
+      "@vben/plugins/*": ["libs/effects/plugins/src/*/index"],
+      "@vben/styles": ["libs/styles/src"],
+      "@vben/tailwind-config": ["internal/tailwind-config/src"],
+      "@vben/tailwind-config/*": ["internal/tailwind-config/src/*"],
+      "@vben-core/icons": ["libs/@core/base/icons/src"],
+      "@vben/node-utils": ["internal/node-utils/src"],
+      "@vben/types/global": ["libs/types/global.d.ts"]
+    },
+
+    // 类型检查和生成配置
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "importHelpers": true,
+
+    // 其他编译选项
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    "useDefineForClassFields": true,
+    "noEmit": false,
+
+    // Vue 特定配置
+   "types": [
+     "vite/client",
+     "vue/ref-macros",
+     "node"
+   ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "libs/@core/**/*.ts",
+    "libs/@core/**/*.d.ts",
+    "libs/@core/**/*.tsx",
+    "libs/@core/**/*.vue"
+  ],
+  "exclude": ["**/node_modules/**", "**/dist/**", "**/.turbo/**"]
+}
