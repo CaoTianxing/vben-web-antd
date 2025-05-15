@@ -124,5 +124,5 @@
     "libs/@core/**/*.tsx",
     "libs/@core/**/*.vue"
   ],
-  "exclude": ["**/node_modules/**", "**/dist/**", "**/.turbo/**"]
+  "exclude": ["**/node_modules/**", "**/dist/**"]
 }
